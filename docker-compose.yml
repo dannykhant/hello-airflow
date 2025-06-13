@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  hello-airflow:
+    build: .
+    volumes:
+      - ./airflow:/opt/airflow
+    ports:
+      - "8080:8080"
+    command: "airflow standalone"
+    environment:
+      AIRFLOW__LOGGING__LOG_SERVER_URL: http://localhost:8793
+
+  hello-smtp:
+    image: bytemark/smtp
+    restart: always
