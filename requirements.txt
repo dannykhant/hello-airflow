@@ -3,3 +3,4 @@ requests
 pandas
 apache-airflow-providers-github
 apache-airflow-providers-google
+pendulum
