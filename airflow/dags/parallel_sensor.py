@@ -16,7 +16,7 @@ def parallel_sensor():
         task_id="wait_files",
         fs_conn_id="fs_default"
     ).expand(
-        files=["f1.csv", "f2.csv", "f3.csv"]
+        filepath=["f1.csv", "f2.csv", "f3.csv"]
     )
 
     @task
